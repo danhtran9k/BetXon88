@@ -1,0 +1,43 @@
+@use "@styles/base" as *;
+
+@mixin customButton($firstColor, $secondColor) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: $firstColor;
+  padding: 10px 10px;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  width: 120px;
+  height: 40px;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s;
+  z-index: 10;
+  &::before {
+    content: "";
+    position: absolute;
+    background: $secondColor;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    z-index: -1;
+  }
+  &:hover {
+    color: black;
+  }
+  &:hover:before {
+    width: 100%;
+  }
+}
+
+.login_btn {
+  @include customButton($pink, $custom-button);
+}
+.logout_btn {
+  @include customButton($custom-button, $pink);
+}

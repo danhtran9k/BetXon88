@@ -1,0 +1,100 @@
+// ======================= PATH ===========================
+$images-path: "/images";
+$image-body: $images-path + "/body_bg.jpg";
+$image-heading-icon: $images-path + "/heading_icon.jpeg";
+$image-networksci-btn: $images-path + "/networksci/ci_down_btn.jpeg";
+
+$image-about: $images-path + "/company_about_img_1.jpeg";
+$primary-font-family: "nanum-barun-gothic", "Nanum Gothic", Gulim, Helvetica,
+  AppleGothic, Sans-serif;
+//END ======================= PATH ===========================
+
+// ======================= SIZE ===========================
+$main-container-width: 1050px;
+$left-container-width: 179px;
+$right-container-width: 770px;
+$offset-top: 31px;
+$offset-left: 20px;
+$padding-container: 25px;
+$default-gap: 10px;
+$font-size: 14px;
+$font-weight: 600;
+//END ======================= SIZE ===========================
+
+// ======================= COLOR ===========================
+$header-background: #202a39;
+$custom-button: linear-gradient(114.26deg, #ff6600 13.41%, #ff6600 87.24%);
+$orange: #ff6600;
+$pink: #f3486a;
+$black: #030303;
+
+$backdrop-bg: rgba(0, 0, 0, 70%);
+
+$text-title-color: #333;
+$text-content-color: #666;
+$text-history-color: #777;
+$CEO_banner_bg: #f4f4f4;
+$business-slash-color: #c8c8c8;
+$card-border-color: #e7e7e7;
+$card-hover-border-color: #787878;
+$card-type-text-color: #999;
+$card-title-text-color: #222;
+$border-card: 1px solid #e9e9e9;
+$pagination-button-color: #444;
+$table-head-background-color: #fafafa;
+$table-border-color: #e6e6e6;
+$link-hover-color: #009ddc;
+$back-button-background-color: #8a8a8a;
+
+$admin-footer-boder: #ececec;
+$admin-sidebar-bg: #f4f5f7;
+$admin-footer-border: #ececec;
+$admin-logoBtn-bg: #8da1ba;
+$admin-logoBtn-hover-bg: #5c7698;
+$admin-logoBtn: #5c7698;
+$admin-header-border: #526987;
+$admin-sidebar-item-bg: #ababab;
+$admin-sidebar-item-hover-bg: #d1d1d1;
+// END ======================= COLOR ===========================
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center-content {
+  @include flex-col;
+  align-items: center;
+}
+
+@mixin diagonal-line {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background-color: $blue-sky-light;
+  transform: skewY(-27deg);
+  height: 1px;
+  width: 50px;
+  left: calc(50% - 25px);
+}
+
+@mixin title-diagonal-line(
+  $lineColor: $blue-sky-light,
+  $fontColor: $text-content-color
+) {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $fontColor;
+  margin-bottom: 22px;
+  &::after {
+    @include diagonal-line;
+    background-color: $lineColor;
+    bottom: 30px;
+    left: 0;
+    height: 7px;
+    width: 20px;
+    transform: skewY(150deg);
+  }
+}

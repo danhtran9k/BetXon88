@@ -1,0 +1,29 @@
+@use "base";
+
+.main {
+  @include base.flex-center-content;
+  min-width: base.$main-container-width;
+}
+
+.wrapper {
+  display: flex;
+  gap: 39px;
+  width: base.$main-container-width;
+  margin-top: base.$offset-top;
+  overflow: hidden;
+}
+
+.rightContainer {
+  @include base.flex-center-content;
+  flex: auto;
+}
+
+.rightContainerWrapper {
+  width: base.$right-container-width;
+}
+
+.footer {
+  width: 770px;
+  margin-top: 10px;
+  margin-left: 206px;
+}
