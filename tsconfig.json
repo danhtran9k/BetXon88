@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es5",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
@@ -14,8 +14,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "baseUrl": ".",
+    "paths": {
+      "@/modules/*": ["src/modules/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/common/*": ["src/common/*"],
+      "@/configs/*": ["src/configs/*"],
+      "@/styles/*": ["src/styles/*"]
+    }
   },
-  "include": ["src"],
+  "include": ["src/", "**/*.ts", "**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

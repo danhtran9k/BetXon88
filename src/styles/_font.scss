@@ -1,0 +1,32 @@
+font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$nanum-barun-gothic-font-path}/NanumBarunGothicLight.ttf")
+    format("truetype");
+
+  font-family: "nanum-barun-gothic";
+  font-weight: 100;
+}
+
+@font-face {
+  src: url("#{$nanum-barun-gothic-font-path}/NanumBarunGothic.ttf")
+    format("truetype");
+
+  font-family: "nanum-barun-gothic";
+  font-weight: 300;
+}
+
+@font-face {
+  src: url("#{$nanum-barun-gothic-font-path}/NanumBarunGothicBold.ttf")
+    format("truetype");
+
+  font-family: "nanum-barun-gothic";
+  font-weight: 500;
+}
+
+@font-face {
+  src: url("#{$nanum-barun-gothic-font-path}/NanumBarunGothicUltraBold.truetype")
+    format("ttf");
+
+  font-family: "nanum-barun-gothic";
+  font-weight: 800;
+}

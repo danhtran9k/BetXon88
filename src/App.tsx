@@ -1,23 +1,7 @@
-import { MantineProvider } from "@mantine/core";
-import { useState } from "react";
-
 import "./App.css";
-import Header from "./layouts/MainLayout/Header/Header";
-
+import MainApp from "./modules";
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <MantineProvider
-      theme={{ fontFamily: "Open Sans" }}
-      withGlobalStyles
-      withNormalizeCSS
-    >
-      <div className="flex flex-col w-full h-full">
-        <Header></Header>
-      </div>
-    </MantineProvider>
-  );
+  return <MainApp></MainApp>;
 }
 
 export default App;

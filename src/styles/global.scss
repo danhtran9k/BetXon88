@@ -1,0 +1,66 @@
+@use "base";
+@use "font";
+
+:root {
+  font-family: base.$primary-font-family;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-repeat: repeat-y;
+  background-position: center top;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+h3 {
+  margin-bottom: 22px;
+  padding-top: 22px;
+  font-size: 18px;
+  font-weight: bold;
+  color: base.$black-gray;
+}
+
+.heading-icon {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 20;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    background-image: url(base.$image-heading-icon);
+    background-repeat: no-repeat;
+  }
+}
+
+.contents-container {
+  padding: 0 20px 80px 20px;
+}
