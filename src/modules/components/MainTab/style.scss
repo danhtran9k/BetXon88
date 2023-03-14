@@ -1,0 +1,45 @@
+@use "@styles/base" as *;
+
+// .tab {
+//   display: flex;
+//   flex-direction: row;
+//   // color: white;
+//   gap: 7px 22px;
+// }
+
+.tab-icon {
+  width: 14px;
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-tab {
+  background: $main-tab;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  font-size: $font-size;
+  .ant-anchor {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 4rem;
+    gap: 1.5rem;
+    .ant-anchor-link {
+      .ant-anchor-link-title {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        color: $text-color;
+        font-weight: $font-weight;
+      }
+      .ant-anchor-link-title-active {
+        color: white;
+      }
+    }
+    .ant-anchor-ink {
+      background-color: transparent !important;
+    }
+  }
+}

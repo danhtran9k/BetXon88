@@ -1,0 +1,19 @@
+@use "@styles/base" as *;
+.header {
+  background: $header-background;
+}
+
+.menu {
+  background: #202a39;
+  font-size: $font-size-header;
+  //   min-width: 600px;
+  .ant-menu-item {
+    color: white;
+    &:hover {
+      color: $orange !important;
+      &::after {
+        border-bottom-color: $orange !important;
+      }
+    }
+  }
+}
