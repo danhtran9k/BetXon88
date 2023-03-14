@@ -22,7 +22,8 @@
       "@/hooks/*": ["src/hooks/*"],
       "@/common/*": ["src/common/*"],
       "@/configs/*": ["src/configs/*"],
-      "@/styles/*": ["src/styles/*"]
+      "@/styles/*": ["src/styles/*"],
+      "@/icons/*": ["src/icons/*"]
     }
   },
   "include": ["src/", "**/*.ts", "**/*.tsx"],
